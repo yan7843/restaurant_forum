@@ -17,6 +17,10 @@ class UsersController < ApplicationController
     redirect_to user_path(@user)
   end
 
+  def index
+    @users = User.all
+  end
+
   private
 
   def set_user
